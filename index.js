@@ -1,31 +1,34 @@
-// Code your solution here
-// const findMatching = drivers.filter((driver) => driver === "Bobby");
-// function findMatching(collection) {
-//   let newArray = [];
-//   for (let item of collection) {
-//     if (item.drivers === item.drivers) return newArray.push(item.drivers);
-//   }
-// }
-
-// function findMatching(collection, name) {
-//   return collection.filter(function (el) {
-//     return el;
-//   });
-// }
+// const drivers = [
+//     {
+//       name: 'Bobby',
+//       hometown: 'Pittsburgh' },
+//     {
+//       name: 'Sammy',
+//       hometown: 'New York' } ,
+//     {
+//       name: 'Sally',
+//       hometown: 'Cleveland' },
+//     {
+//       name: 'Annette',
+//       hometown: 'Los Angeles' },
+//     {
+//       name: 'Bobby',
+//       hometown: 'Tampa Bay' }
+//   ];
 
 function findMatching(drivers, name) {
-  const result = drivers.filter(
-    (driver) => name.toLowerCase() === driver.toLowerCase()
+  const matcher = drivers.filter(
+    (drivers) => drivers.toLowerCase() === name.toLowerCase()
   );
-  return result;
+  return matcher;
 }
 
-function fuzzyMatch(drivers, name) {
-  const result = drivers.filter((driver) => driver.startsWith(name));
-  return result;
+function fuzzyMatch(drivers, letters) {
+  const matching = drivers.filter((drivers) => drivers.startsWith(letters));
+  return matching;
 }
 
-function matchName(drivers, string) {
-  const result = drivers.filter((driver) => driver.name === string);
-  return result;
+function matchName(drivers, name) {
+  const matchy = drivers.filter((drivers) => drivers.name === name);
+  return matchy;
 }
